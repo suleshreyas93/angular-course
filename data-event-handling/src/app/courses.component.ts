@@ -16,8 +16,15 @@ import { Component } from '@angular/core';
             <button class = "btn btn-primary" (click) = "onSave($event)">Save</button>
         </div>
 
-        <input (keyup.enter) = "onKeyUp($event)"/>
+        <br><br><br>
         <input [(ngModel)] = "email" (keyup.enter) = "onKeyUp()"/>
+        <br><br><br><br>
+        {{ courses. title | uppercase }}<br>
+        {{ courses.students | number }}<br>
+        {{ courses.rating | number:'1.1-2' }}<br>
+        {{ courses.price | currency:'AUD':true }}<br>
+        {{ courses.date | date:'mediumDate'}}
+
         
     `
 })
@@ -26,6 +33,14 @@ export class CoursesComponent
     email;
     title = "List of courses";
     colSpan = 2;
+
+    courses = {
+        title:'The Complete Angular Course',
+        students:409586,
+        rating:3.45,
+        price:120.75,
+        date:new Date()
+    }
 
     onDivClick()
     {

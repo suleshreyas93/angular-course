@@ -24,6 +24,11 @@ import { Component } from '@angular/core';
         {{ courses.rating | number:'1.1-2' }}<br>
         {{ courses.price | currency:'AUD':true }}<br>
         {{ courses.date | date:'mediumDate'}}
+        <br><br><br>
+
+        {{ text | summary:10 }}
+
+
 
         
     `
@@ -33,6 +38,15 @@ export class CoursesComponent
     email;
     title = "List of courses";
     colSpan = 2;
+
+    text = 
+    `
+    "Science is about knowing, engineering is about doing”, 
+    inspired by the above statement and pragmatically rich subjects like Data Structures, 
+    Analysis and Algorithm design, Web engineering, Database Management Systems, 
+    augmented my desire to learn and hone the skill set outside the classroom studies. 
+    I strongly believe that a software engineer should be instinctive, innovative, and quick to adapt and adopt to new technologies which is only possible with solid foundation and profundity in these subjects.The best way to predict your future is to create it”, is what drives my enthusiasm and urge to excel and make the best use of every learning opportunity.
+    `
 
     courses = {
         title:'The Complete Angular Course',

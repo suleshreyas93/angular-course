@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses.component';
 import { SummaryPipe } from './summary.pipe';
 import { FavoriteComponent } from './favorite/favorite.component';
+import { TitleCasePipe } from './favorite/title-case.pipe';
+
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { FavoriteComponent } from './favorite/favorite.component';
     AppComponent,
     CoursesComponent,
     SummaryPipe,
-    FavoriteComponent
+    FavoriteComponent,
+    TitleCasePipe
+  
   ],
   imports: [
     BrowserModule,

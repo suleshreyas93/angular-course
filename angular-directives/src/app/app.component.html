@@ -22,7 +22,7 @@
   <h1>No Courses Yet!</h1>
 </ng-template> -->
 
-<div *ngIf="courses.length > 0; then coursesList else noCourses"></div>
+<!-- <div *ngIf="courses.length > 0; then coursesList else noCourses"></div>
 <ng-template #coursesList>
     <h1>List of courses : </h1>
     <ul *ngFor="let course of courses">
@@ -32,4 +32,22 @@
 
 <ng-template #noCourses>
     <h1>No Courses Yet!</h1>
-</ng-template>
+</ng-template> -->
+
+<!-- <ul class="nav nav-pills">
+  <li [class.active]="viewMode=='map'"><a (click)="viewMode='map'">Map</a></li>
+  <li [class.active]="viewMode=='list'"><a (click)="viewMode='list'">List</a></li>
+</ul>
+
+<div [ngSwitch]="viewMode">
+  <div *ngSwitchCase="'map'">Map View Content</div>
+  <div *ngSwitchCase="'list'">List View Content</div>
+  <div *ngSwitchDefault>Otherwise</div>
+</div> -->
+
+<button class="btn btn-primary" (click)="addCourse()">Add Course</button>
+<ul>
+  <li *ngFor="let course of courses">
+    {{ course.name }} <button class="btn btn-danger" (click)="removeCourse(course)">Remove Course</button>&nbsp;&nbsp;<button class="btn btn-success" (click)="updateCourse(course)">Update Course</button>
+  </li>
+</ul>

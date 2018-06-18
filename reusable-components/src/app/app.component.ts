@@ -14,6 +14,12 @@ export class AppComponent {
     isFavorite:true
   }
 
+  tweet = {
+    post: 'Building the reusable component',
+    isActive: true,
+    likesCount: 10
+  }
+
   onFavoriteModified(eventArgs: FavoriteModifiedEvent)
   {
     console.log("Favorite Modified",eventArgs.newValue);

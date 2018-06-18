@@ -12,4 +12,9 @@ export class AppComponent {
     title:'Angular Course',
     isFavorite:true
   }
+
+  onFavoriteModified()
+  {
+    console.log("Favorite Modified");
+  }
 }

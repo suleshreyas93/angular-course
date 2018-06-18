@@ -25,4 +25,6 @@ export class AppComponent {
   {
     course.name = 'Updated';
   }
+
+  isSelected = false;
 }

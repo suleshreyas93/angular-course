@@ -48,6 +48,7 @@
 <button class="btn btn-primary" (click)="addCourse()">Add Course</button>
 <ul>
   <li *ngFor="let course of courses">
-    {{ course.name }} <button class="btn btn-danger" (click)="removeCourse(course)">Remove Course</button>&nbsp;&nbsp;<button class="btn btn-success" (click)="updateCourse(course)">Update Course</button>
+    <favorite [isSelected]="isSelected"></favorite>{{ course.name }} <button class="btn btn-danger" (click)="removeCourse(course)">Remove Course</button>&nbsp;&nbsp;<button class="btn btn-success" (click)="updateCourse(course)">Update Course</button>
   </li>
 </ul>
+

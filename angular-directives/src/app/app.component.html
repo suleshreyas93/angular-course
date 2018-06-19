@@ -45,10 +45,14 @@
   <div *ngSwitchDefault>Otherwise</div>
 </div> -->
 
-<button class="btn btn-primary" (click)="addCourse()">Add Course</button>
+<!-- <button class="btn btn-primary" (click)="addCourse()">Add Course</button>
 <ul>
   <li *ngFor="let course of courses">
     <favorite [isSelected]="isSelected"></favorite>{{ course.name }} <button class="btn btn-danger" (click)="removeCourse(course)">Remove Course</button>&nbsp;&nbsp;<button class="btn btn-success" (click)="updateCourse(course)">Update Course</button>
   </li>
-</ul>
+</ul> -->
+
+<zippy-component title="Shipping Details">
+  Shipping Details Content
+</zippy-component>
 

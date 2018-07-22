@@ -1,0 +1,64 @@
+<form #f="ngForm" (ngSubmit)="submit(f)">
+  <div class="form-group">
+    <label for="firstName">First Name</label>
+    <input required minlength = 3 type="text" class="form-control" id="firstName" name="firstName" ngModel #firstName="ngModel" (change)="log(firstName)">
+  </div>
+  <div class="alert alert-danger" *ngIf="firstName.touched && firstName.invalid">
+    <div *ngIf="firstName.errors.required">First Name is required</div>
+    <div *ngIf="firstName.errors.minlength"> First name should contain minimum {{ firstName.errors.minlength.requiredLength }} characters</div>
+  </div>
+
+  <div class="form-group">
+    <label for="name">Last Name</label>
+    <input required minlength = 3 type="text" class="form-control" id="lastName" name="lastName" ngModel #lastName="ngModel" (change)="log(lastName)">
+  </div>
+  <div class="alert alert-danger" *ngIf="lastName.touched && lastName.invalid">
+    <div *ngIf="lastName.errors.required">Last name is required</div>
+    <div *ngIf="lastName.errors.minlength">Last name should contain {{lastName.errors.minlength.requiredLength}} characters.</div>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" required ngModel #email="ngModel" name="email" id="email" class="form-control">
+  </div>
+  <div class="alert alert-danger" *ngIf="email.touched && email.invalid">
+    <div *ngIf="email.errors.required">Email is required</div>
+
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" required minlength="6" name="password" id="password" class="form-control" ngModel #password="ngModel">
+  </div>
+
+  <div class="alert alert-danger" *ngIf="password.touched && password.invalid">
+    <div *ngIf="password.errors.required">Password is required</div>
+    <div *ngIf="password.errors.minlength">Password must be minimum {{password.errors.minlength.requiredLength}} characters</div>
+
+  </div>
+
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" ngModel #offers="ngModel" name="offers" id="offers">Subscribe to Mailing List
+    </label>
+  </div>
+
+  <p>{{ f.value | json }}</p>
+
+  <div class="form-group">
+    <label for="contactMethod">Contact Method</label>
+    <select class="form-control" ngModel name="contactMethod" id="contactMethod" #contactMethod="ngModel">
+      <option value=""></option>
+      <option *ngFor="let method of contactMethods" [ngValue] = "method">{{method.name}}</option>
+    </select>
+  </div>
+
+  <div class="radio">
+    <label *ngFor = "let method of contactMethods" >
+      <input type="radio" name="contactMethod" [value] = "method.id">
+      {{method.name}}
+    </label>
+  </div>
+
+  <button class="btn btn-primary" [disabled] = "f.invalid">Submit</button>
+</form>

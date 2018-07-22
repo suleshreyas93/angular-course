@@ -34,7 +34,11 @@ export class PostsComponent implements OnInit {
     this.service.createPost(post).subscribe(response => {
       post['id'] = response.json().id;
       this.posts.splice(0,0,post);
-    }, error => {
+    }, (error: Response) => {
+        if(error.status === 400)
+        {
+          //this.form.setErros(error.json());
+        }
       alert('unexpected error has occured');
       console.log(error);
     })
@@ -52,12 +56,20 @@ export class PostsComponent implements OnInit {
 
   deletePost(post)
   {
-    this.service.deletePost(post.id).subscribe(response => {
+    this.service.deletePost(345).subscribe(response => {
       let index = this.posts.indexOf(post);
       this.posts.splice(index,1);
-    }, error => {
-      alert('unexpected error has occured');
-      console.log(error);
+    }, (error: Response) => {
+      if(error.status === 404)
+      {
+        alert('this post was already deleted');
+      }
+      else
+      {
+        alert('unexpected error has occured');
+        console.log(error);
+      }
+      
     })
   }
 

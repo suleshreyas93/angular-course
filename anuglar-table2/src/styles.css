@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+/*@import '~@angular/material/prebuilt-themes/indigo-pink.css';*/
+@import '~bootstrap/dist/css/bootstrap.css';
+
+/*.mat-card-header{
+    background-color: cadetblue;
+}*/
+
+#my-title-container{
+    background: #283593;
+    
+}
+.my-card-header-title{
+    color: white;
+    font-size: 18pt;
+    font-family: Calibri;
+    /* height: 120px; */
+}
+
+.card{
+    margin: auto;
+    width: 30%;
+    
+}

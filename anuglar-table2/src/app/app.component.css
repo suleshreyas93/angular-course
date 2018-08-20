@@ -1,0 +1,48 @@
+@import '~bootstrap/dist/css/bootstrap.css';
+.mat-card-header {
+
+    background-color:#9E9E9E !important;
+
+    padding: 5px !important;
+
+}
+
+.mat-card {
+
+    padding: 0 !important;
+     /* width: 20%;    
+    
+    float: left;  */
+    width: 80%;
+
+    margin: auto;
+    margin-left: 30px;
+    margin-top: 30px;
+    
+    
+    
+
+}  
+
+/* .row{
+    margin: auto;
+    width: 60%;
+
+} */
+
+ 
+
+.mat-card-content {
+
+    padding: 5px !important;
+
+}
+
+.mat-grid-list{
+    width: 60%;
+    margin: auto;
+}
+
+button{
+    width: 100px;
+}

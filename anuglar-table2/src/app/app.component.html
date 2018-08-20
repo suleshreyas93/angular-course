@@ -1,8 +1,8 @@
-<div>
+<!-- <div>
     <mat-form-field>
         <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
       </mat-form-field>
-  <mat-table class="mat-elevation-z8" [dataSource]="dataSource" matSort>
+  <mat-table class="mat-elevation-z8" [dataSource]="dataSource" matSort> -->
 
     <!--
       <ng-container matColumnDef="position">
@@ -10,10 +10,10 @@
       <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
     </ng-container>
     -->
-    <ng-container matColumnDef="name">
+    <!-- <ng-container matColumnDef="name">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
-      </ng-container>
+      </ng-container> -->
 
 
     <!-- <ng-container matColumnDef="firstName">
@@ -21,10 +21,10 @@
       <mat-cell *matCellDef="let element"> {{element.firstName}} </mat-cell>
     </ng-container> -->
 
-    <ng-container matColumnDef="email">
+    <!-- <ng-container matColumnDef="email">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
-      </ng-container>
+      </ng-container> -->
 
 
     <!-- <ng-container matColumnDef="lastName">
@@ -32,10 +32,10 @@
       <mat-cell *matCellDef="let element"> {{element.lastName}} </mat-cell>
     </ng-container> -->
 
-    <ng-container matColumnDef="phone">
+    <!-- <ng-container matColumnDef="phone">
         <mat-header-cell *matHeaderCellDef> Phone </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.phone}} </mat-cell>
-      </ng-container>
+      </ng-container> -->
 
 
     <!-- <ng-container matColumnDef="email">
@@ -43,7 +43,7 @@
       <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
     </ng-container> -->
 
-    <ng-container matColumnDef="company">
+    <!-- <ng-container matColumnDef="company">
         <mat-header-cell *matHeaderCellDef> Company </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.company.name}} </mat-cell>
     </ng-container>
@@ -53,15 +53,71 @@
 
   <mat-paginator [length]="5" [pageSize]="3" [pageSizeOptions]="[5, 10, 25]">
   </mat-paginator>
-</div>
-
-<!-- <div>
-  <mat-card>
-    <mat-card-header>HI</mat-card-header>
-  </mat-card>
 </div> -->
 
-<div class="login form">
+<!-- <div class="row"> -->
+<mat-grid-list cols="3" rowHeight="2:1">
+  <mat-grid-tile>
+      <mat-card class="mat-elevation-z9">
+          <mat-card-header id="my-card-header">
+            <mat-card-title>Shiba Inu</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <!-- <ul>
+              <li>Post Trade Monitor</li>
+              <li>Account Monitor</li>
+              <li>System Administration</li>
+              <li>Portal Admin</li>
+            </ul> -->
+            <mat-selection-list>
+              <mat-list-option>Post Trade Monitor</mat-list-option>
+              <mat-list-option>Account Monitor</mat-list-option>
+              <mat-list-option>System Administration</mat-list-option>
+              <mat-list-option>Portal Admin</mat-list-option>
+            </mat-selection-list>
+          </mat-card-content>
+        </mat-card>
+  </mat-grid-tile>
+  
+  
+  <!-- <mat-card class="mat-elevation-z9">
+    <mat-card-header id="my-card-header">
+      <mat-card-title>Shiba Inu</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>Post Trade Monitor</li>
+        <li>Account Monitor</li>
+        <li>System Administration</li>
+        <li>Portal Admin</li>
+      </ul>
+    </mat-card-content>
+  </mat-card> -->
+  <mat-grid-tile>
+    <div>
+      <button class="btn btn-success">Add ></button><br><br>
+      <button class="btn btn-danger"> < Remove</button><br><br>
+      <button class="btn btn-primary">Save</button>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+      <mat-card class="mat-elevation-z9">
+          <mat-card-header id="my-card-header">
+            <mat-card-title>Shiba Inu</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <ul>
+              <li>Post Trade Monitor</li>
+              <li>Account Monitor</li>
+              <li>System Administration</li>
+              <li>Portal Admin</li>
+            </ul>
+          </mat-card-content>
+        </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<!-- <div class="login form">
   <div class="card">
           <div id="my-title-container" class="card-header">
                   <h5 class="my-card-header-title">LOGIN</h5>
@@ -96,4 +152,4 @@
 
   </div>
 
-</div>
+</div> -->

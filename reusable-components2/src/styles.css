@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+    .container{
+        display: flex;
+        padding: 10px;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+    }
+
+
+
+.table{
+    /* flex: 1; */
+    flex-basis: 80%;
+    /* justify-content: center; */
+    /* flex-wrap: wrap; */
+    
+    
+    
+}
+
+.mat-header-cell{
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    flex:1;
+}
+
+.mat-header-row{
+    
+    min-height: 28px !important;
+    border-bottom-color: black;
+    flex:1;
+    
+}
+
+.mat-header-cell{
+    flex: 1;
+    flex-wrap: wrap;
+}
+.mat-row{
+    min-height: 25px !important;
+    border-bottom-color: black;
+    flex: 1;
+}
+
+.mat-row:nth-child(odd){
+    background: #9E9E9E;
+}
+
+.mat-row:nth-child(even){
+    background: #757575;
+}
